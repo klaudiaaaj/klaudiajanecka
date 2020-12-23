@@ -1,0 +1,71 @@
+﻿@model  IEnumerable<DanceSchool_10._05_ASP.NET_MVC.Models.Group>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/temp.cshtml";
+
+    ViewBag.Title = "Sup name";
+    var name = ViewBag.Dancer;
+    var id=0;
+
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<body data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0">
+
+    <section class="hero-wrap js-fullheight" style="background-image: url('images/group.jpg');">
+       </section>
+        <section class="ftco-section">
+            <div class="container">
+                <div class="row justify-content-center mb-5 pb-3">
+                    <div class="col-md-12 heading-section ftco-animate text-center fadeInUp ftco-animated">
+                        <h3 class="subheading">Dance Groups</h3>
+                        <h2 class="mb-1">Choose Your Favourite One &amp; Check Out</h2>
+                    </div>
+                </div>
+               
+                    <a asp-action="Create">Create New Group </a>
+                </p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th> Group Name </th>
+                            <th>
+                               Action
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+
+                        <tr>                          
+                            <th>
+                                <a class="navbar-brand" asp-action="Display" asp-controller="Groups" asp-route-id="@item.GroupId"> @Html.DisplayFor(modelItem => item.GroupName) </a>
+                              
+                            </th>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.GroupId">Edit</a> |
+                                <a asp-action="Details" asp-route-id="@item.GroupId">Details</a> |
+                                <a asp-action="Delete" asp-route-id="@item.GroupId">Delete</a>
+                            
+                            </td>
+                        </tr>
+                        }
+                        <form asp-controller="Dancers" asp-action="Search" method="get">
+                            <p>
+                                  Search for a dancer: <input type="text" name="SearchString" />
+                                <input type="submit" value="Filter" />
+                            </p>
+                        </form>
+            </div>
+
+            </tbody>
+            </table>
+            </section>
+</body></html>
