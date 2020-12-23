@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="DanceSchool_10._05\l_ASP.NET_MVC.Models.Dancer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_dance_school__10_1_1__05___a_s_p_1_1_n_e_t___m_v_c_1_1_models_1_1_dancer.html",tooltip=" "];
+}

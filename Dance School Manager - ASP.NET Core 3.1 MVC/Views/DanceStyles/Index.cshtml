@@ -1,0 +1,64 @@
+﻿@model IEnumerable<DanceSchool_10._05_ASP.NET_MVC.Models.DanceStyle>
+
+@{
+    ViewData["Title"] = "Dance Styles";
+    Layout = "~/Views/Shared/temp.cshtml";
+}
+@section scripts{}
+<!DOCTYPE html>
+<html lang="en">
+
+<body data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0">
+   
+    <section class="hero-wrap js-fullheight" style="background-image: url(&quot;images/my3.jpg&quot;); height: 969px;"></section> 
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-12 heading-section ftco-animate text-center fadeInUp ftco-animated">
+                    <h3 class="subheading">Dance Groups</h3>
+                    <h2 class="mb-1">Choose Your Favourite One &amp; Check Out</h2>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DancestyleName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DancestyleId)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <a class="navbar-brand" asp-controller="DanceStyles" asp-action="Display"  asp-route-id="@item.DancestyleId"> @Html.DisplayFor(modelItem => item.DancestyleName) </a>
+                     
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DancestyleId)
+                    </td>
+
+                   
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</body>
+</html>

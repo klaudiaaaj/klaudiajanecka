@@ -1,0 +1,97 @@
+﻿@model DanceSchool_10._05_ASP.NET_MVC.Models.RequestModel
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/temp.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<body data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0">
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-7 heading-section ftco-animate text-center fadeInUp ftco-animated">
+                    <h2 class="subheading">LET US CONTACT YOU</h2>
+                    <h3 class="mb-1">Please write your email and we will contact you as fast as possible.</h3>
+
+    </section>
+    <section class="ftco-section contact-section">
+        <div class="container">
+            @using (Html.BeginForm())
+            {
+
+                <div class="row block-9">
+                    <div class="col-md-4 contact-info ftco-animate bg-light p-4 fadeInUp ftco-animated">
+                        <div class="row">
+                            <div class="col-md-12 mb-4">
+                                <h2 class="h4">Contact Information</h2>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <p><span>Address:</span> Gliwice Ul. NieMaTakiejUlicy 22</p>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <p><span>Phone:</span> <a href="tel://1234567920" >123-456-789</a></p>
+
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <p><span>Email:</span> <a href="mailto:info@yoursite.com">klaujan456@student.polsl.pl</a></p>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6 ftco-animate fadeInUp ftco-animated">
+                        <form asp-controller="Offert" asp-action="Contact" method="post">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Your name" name="Name">
+                                        @Html.ValidationMessageFor(x => x.Name)
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Surname" name="Surname">
+                                        @Html.ValidationMessageFor(x => x.Surname)
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Email " name="Email">  @Html.ValidationMessageFor(x => x.Email)
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="tel" class="form-control" placeholder="Phone Number(xxx-xxx-xxx) " name="Phone"  required>
+                                        @Html.ValidationMessageFor(x => x.Phonenr)
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Save Your data" class="btn btn-primary py-3 px-5">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+
+            }
+            @if (!string.IsNullOrEmpty(ViewBag.message))
+            {
+
+                <h3>@ViewBag.message</h3>
+            }
+        </div>
+    </section>
+</body>
+</html>
