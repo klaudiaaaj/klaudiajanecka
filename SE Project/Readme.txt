@@ -1,0 +1,1 @@
+I was developing this project with Kamil Szymoniak, Kamil Żurawlow, Dawid Osuchowski, Wiktor Vilczek 
