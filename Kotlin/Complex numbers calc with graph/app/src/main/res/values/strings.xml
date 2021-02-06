@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">KlaudiaJanecka</string>
+    <string-array name="options">
+        <item>Addition</item>
+        <item>Subtraction</item>
+    </string-array>
+</resources>
