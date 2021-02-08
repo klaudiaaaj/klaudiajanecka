@@ -1,4 +1,4 @@
-package pl.polsl.mt
+package pl.polsl.tm
 
 import org.junit.Test
 
