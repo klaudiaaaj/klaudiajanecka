@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container">
+<div class="row">
+<div class="col-sm">
+    <mat-card class="githubcard">
+        <mat-card-title-group>
+          <mat-card-title>Github</mat-card-title>
+          <img mat-card-sm-image src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" >
+        </mat-card-title-group>
+        <mat-card-content class="font-bold">
+            <span *ngIf="github else unAuthorized_github" >Authorized
+                <i class="fa fa-check"></i> 
+            </span>    
+            <ng-template #unAuthorized_github>
+            <span class="label unAuthorized">Not Authorized
+                <i class="fa fa-close"></i>           
+            </span>
+            <div>
+            <button class="w3-button w3-red" (click)= "nextlLogin()">Authorize Github account</button>
+            </div>
+        </ng-template>     
+        </mat-card-content>
+      </mat-card>
+</div>
+<div class="col-sm">
+    <mat-card class="discordcard">
+        <mat-card-title-group>
+          <mat-card-title>Discord</mat-card-title>
+          <img mat-card-sm-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq3GXz9GEfB02OuMimOGJFH6ncPfaAR2cH1Q&usqp=CAU" >
+        </mat-card-title-group>
+        <mat-card-content class="font-bold">
+            <span *ngIf="discord else unAuthorized_discord" class="label success" >Authorized
+                <i class="fa fa-check"></i>
+                <div class="joinDiscord">
+                To fully get use of the tool, you have to join application discord server
+                    <button (click)="joinDc()">Join discord</button>
+                </div>
+            </span>
+            <ng-template #unAuthorized_discord>
+            <span class="label unAuthorized">Not Authorized
+                <i class="fa fa-close"></i>
+            </span>
+            <div>
+            <button class="w3-button w3-red" (click)= "nextlLogin()">Authorize Discord account</button>
+            </div>
+            </ng-template>          
+        </mat-card-content>
+      </mat-card>
+</div>
+  </div>
+</div>

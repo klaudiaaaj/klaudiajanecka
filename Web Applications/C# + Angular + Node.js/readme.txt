@@ -1,0 +1,1 @@
+Final project carried out under the supervision of a Ph. D Paweł Foszner.

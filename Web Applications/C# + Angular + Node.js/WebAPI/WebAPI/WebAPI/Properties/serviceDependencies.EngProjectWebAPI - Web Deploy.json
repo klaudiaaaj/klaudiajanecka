@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/eng-proj-sqlserver/databases/engproj-database",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:DevConnection",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

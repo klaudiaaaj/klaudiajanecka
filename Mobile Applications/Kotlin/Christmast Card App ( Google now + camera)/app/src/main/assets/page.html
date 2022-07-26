@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/html">
+<body>
+<center>
+
+    <button onClick="getPresentsList()">New Presents</button>
+    <button onclick="generate()">Generate</button>
+
+</center>
+<script type="text/javascript">
+    function getPresentsList()
+    {
+    var presents = activity.getPresentsList();
+    console.log(presents);
+    document.getElementById("presentList").innerHTML = presents;
+    }
+
+    function generate()
+    {
+    activity.generate();
+    }
+</script>
+</body>
+</html>

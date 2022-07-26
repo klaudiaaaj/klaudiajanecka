@@ -1,0 +1,21 @@
+section {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.loginUser {
+  margin-top: 20px;
+}
+form {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  padding: 10px 10px;
+  width: 250px;
+}

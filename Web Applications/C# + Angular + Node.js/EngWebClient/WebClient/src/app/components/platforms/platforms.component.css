@@ -1,0 +1,34 @@
+.flex{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.inv{
+    border: 15px solid green;
+}
+.font-bold {
+    font-weight: bold;
+  }
+
+  .mat-tab center{  
+    display:inline-block;
+  }
+  .center {   
+       text-align: center;
+
+ }
+ .githubcard {
+    max-width: 400px;
+    margin-bottom: 8px;
+  }
+  .discordcard {
+    max-width: 400px;
+    margin-bottom: 8px;
+  }
+  .container{
+      margin-top: 50px;
+  }
+  .joinDiscord{
+      margin-top: 10px;
+    font-weight: lighter;
+  }

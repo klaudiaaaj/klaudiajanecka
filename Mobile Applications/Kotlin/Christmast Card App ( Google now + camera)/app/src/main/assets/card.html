@@ -1,0 +1,66 @@
+<html xmlns="http://www.w3.org/1999/html">
+<body onload="loadData()">
+<head>
+</head>
+
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-size: 100% 100%;}
+        html
+        {
+        height: 100%;
+        }
+        .imgbox {
+          position: relative;
+          font-family: Arial;
+        }
+        .center-fit {
+            max-width: 100%;
+            height: 100vh;
+            width: auto
+            margin-left: auto;
+            margin-right: auto;
+            position: relative; }
+        .scroller {
+        direction: ltr;
+         overflow:auto;
+         height: 200px;
+         width: 200px;
+         position: absolute;
+          bottom: 20px;
+          left: 20px;
+          background-color: white;
+          color: black;
+          padding-left: 20px;
+          padding-right: 20px;}
+    .photo {
+      position: absolute;
+      overflow:auto;
+      width: 90px;
+      height: auto;
+      top: 10px;
+      left: 40px;
+      border: 1px red solid
+}
+</style>
+
+<div class="imgbox">
+    <img class="center-fit" src="images/card.jpg">
+    <div class="scroller" id="scroller"><div>
+    <img class="photo" id="photo" src=" ">
+</div>
+<script type="text/javascript">
+    function loadData()
+    {
+    var presents = Card.getPresents();
+    document.getElementById("scroller").innerHTML=presents;
+    document.getElementById("photo").src=Card.getPhoto();
+    }
+</script>
+</body>
+
+</html>

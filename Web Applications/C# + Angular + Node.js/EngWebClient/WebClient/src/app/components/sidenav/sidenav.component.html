@@ -1,0 +1,25 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+    <mat-nav-list>
+      <a mat-list-item type="button">
+        <mat-icon class="icon">input</mat-icon>
+        <span class="label">LogOut</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+          <li>
+            <a *ngIf="currentUser !== null">
+              <mat-icon class="icon">input</mat-icon>
+              <span class="label" (click)="logout()">LogOut</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </mat-toolbar>
+    <main></main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,74 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://localhost:3000/home",
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.19.3",
+    "@types/react": "^16.9.55",
+    "@types/react-dom": "^16.9.9",
+    "@types/react-pdf": "^5.0.0",
+    "@types/react-router": "^5.1.8",
+    "@types/react-text-mask": "^5.4.6",
+    "@types/yup": "^0.29.11",
+    "autocomplete": "^0.0.1",
+    "axios": "^0.21.1",
+    "formik": "^2.2.6",
+    "formik-yup": "^0.0.5",
+    "i18next": "^19.8.4",
+    "moment": "^2.29.1",
+    "react": "^16.8.0",
+    "react-beforeunload": "^2.4.0",
+    "react-dom": "^16.8.0",
+    "react-dropzone": "^11.2.4",
+    "react-hook-form": "^6.11.1",
+    "react-hooks-lib": "^0.3.0",
+    "react-i18next": "^11.7.3",
+    "react-moment": "^1.0.0",
+    "react-multi-select-component": "^3.1.1",
+    "react-number-format": "^4.4.4",
+    "react-pdf": "^5.0.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.0",
+    "react-text-mask": "^5.4.3",
+    "toastr": "^2.1.4",
+    "typescript": "^4.0.5",
+    "web-vitals": "^0.2.4",
+    "yup": "^0.28.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.2.0"
+  }
+}

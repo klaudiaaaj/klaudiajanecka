@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<UserSecretsId>cc5f3b8a-67cd-4af1-ba52-7047bcfff59e</UserSecretsId>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Migrations\20201117120253_CreateArticleStatus.cs" />
+		<Compile Remove="Migrations\20201117120253_CreateArticleStatus.Designer.cs" />
+		<Compile Remove="Migrations\20201117120914_CreateArticleStatus.cs" />
+		<Compile Remove="Migrations\20201117120914_CreateArticleStatus.Designer.cs" />
+		<Compile Remove="Migrations\20201230183731_User.cs" />
+		<Compile Remove="Migrations\20201230183731_User.Designer.cs" />
+		<Compile Remove="Migrations\20210103172127_FKArticleAuthor.cs" />
+		<Compile Remove="Migrations\20210103172127_FKArticleAuthor.Designer.cs" />
+		<Compile Remove="Migrations\20210103180213_AuthorArticleFK.cs" />
+		<Compile Remove="Migrations\20210103180213_AuthorArticleFK.Designer.cs" />
+		<Compile Remove="Migrations\20210103182125_AuthorArticleFK.cs" />
+		<Compile Remove="Migrations\20210103182125_AuthorArticleFK.Designer.cs" />
+		<Compile Remove="Migrations\20210103182445_AuthorArticleFK.cs" />
+		<Compile Remove="Migrations\20210103182445_AuthorArticleFK.Designer.cs" />
+		<Compile Remove="Migrations\20210103183740_AddAuthorToArticle.cs" />
+		<Compile Remove="Migrations\20210103183740_AddAuthorToArticle.Designer.cs" />
+		<Compile Remove="Migrations\20210103184556_AddAuthorToArticle.cs" />
+		<Compile Remove="Migrations\20210103184556_AddAuthorToArticle.Designer.cs" />
+		<Compile Remove="Migrations\20210103184759_AddAuthorToArticle.cs" />
+		<Compile Remove="Migrations\20210103184759_AddAuthorToArticle.Designer.cs" />
+		<Compile Remove="Migrations\20210124162254_AddReviewersToArticle.cs" />
+		<Compile Remove="Migrations\20210124162254_AddReviewersToArticle.Designer.cs" />
+		<Compile Remove="Migrations\20210124164425_AddReviewersToArticle.cs" />
+		<Compile Remove="Migrations\20210124164425_AddReviewersToArticle.Designer.cs" />
+		<Compile Remove="Migrations\20210124183149_xd.cs" />
+		<Compile Remove="Migrations\20210124183149_xd.Designer.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+		<PackageReference Include="FluentValidation" Version="9.3.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.10" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.9" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.9" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.9" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.9">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.8.0" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="6.0.1" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
+	</ItemGroup>
+
+
+</Project>
