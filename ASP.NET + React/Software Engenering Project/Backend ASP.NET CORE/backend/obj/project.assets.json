@@ -9165,27 +9165,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\48573\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\klaud\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "K:\\SE Project\\Backend\\backend\\backend.csproj",
+      "projectUniqueName": "C:\\Users\\klaud\\klaudiajanecka\\ASP.NET + React\\Software Engenering Project\\Backend ASP.NET CORE\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "K:\\SE Project\\Backend\\backend\\backend.csproj",
-      "packagesPath": "C:\\Users\\48573\\.nuget\\packages\\",
-      "outputPath": "K:\\SE Project\\Backend\\backend\\obj\\",
+      "projectPath": "C:\\Users\\klaud\\klaudiajanecka\\ASP.NET + React\\Software Engenering Project\\Backend ASP.NET CORE\\backend\\backend.csproj",
+      "packagesPath": "C:\\Users\\klaud\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\klaud\\klaudiajanecka\\ASP.NET + React\\Software Engenering Project\\Backend ASP.NET CORE\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\48573\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\klaud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -9279,7 +9277,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
