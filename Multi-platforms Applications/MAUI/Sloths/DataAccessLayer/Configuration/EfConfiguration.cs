@@ -12,7 +12,8 @@ public static class EfCoreConfiguration
         {
             options.UseSqlServer("Server=tcp:dotnetsloths.database.windows.net,1433;Initial Catalog=dotnetsloths;Persist Security Info=False;User ID=user;Password=usr12345.;MultipleActiveResultSets=False;Connection Timeout=30;");
             
-        });
+        }, ServiceLifetime.Transient);
+
         services.AddScoped<ISlothRepository, SlothRepository>();
 
         return services;

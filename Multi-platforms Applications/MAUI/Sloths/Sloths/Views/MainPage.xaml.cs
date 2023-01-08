@@ -33,4 +33,3 @@ public partial class MainPage : ContentPage
 		var result= await slothService.GetAllSloths();
 	}
 }
-
