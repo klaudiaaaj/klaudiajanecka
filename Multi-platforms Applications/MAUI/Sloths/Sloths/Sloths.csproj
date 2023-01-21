@@ -53,10 +53,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\Bradypus_torquatus.jpg" />
+	  <None Remove="Resources\Images\Bradypus_tridactylus.jpg" />
+	  <None Remove="Resources\Images\choloepus_didactylus.jpg" />
 	  <None Remove="Resources\Images\sloth_icon.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="System.Globalization" Version="4.3.0" />
 	</ItemGroup>
@@ -67,5 +71,14 @@
 	
 	<ItemGroup>
 		<ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj" />
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <MauiXaml Update="Views\SlothsDetailsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SlothsMainList.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 </Project>

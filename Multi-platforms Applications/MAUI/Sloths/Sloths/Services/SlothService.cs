@@ -3,7 +3,7 @@ using Sloths.Repositories;
 
 namespace Sloths.Services
 {
-    public class SlothService: ISlothService
+    public class SlothService : ISlothService
     {
         public readonly ISlothRepository repository;
 
@@ -14,9 +14,8 @@ namespace Sloths.Services
 
         public async Task<IEnumerable<Sloth>> GetAllSloths()
         {
-                var result=await this.repository.GetAllSloths();
+            var result = await repository.GetAllSloths();
             return result;
-
         }
     }
 }

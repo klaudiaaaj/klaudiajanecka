@@ -10,7 +10,7 @@ public static class EfCoreConfiguration
     {
         services.AddDbContext<SlothDbContetxt>(options =>
         {
-            options.UseSqlServer("Server=tcp:dotnetsloths.database.windows.net,1433;Initial Catalog=dotnetsloths;Persist Security Info=False;User ID=user;Password=usr12345.;MultipleActiveResultSets=False;Connection Timeout=30;");
+            options.UseSqlServer("Server=sql5104.site4now.net;Initial Catalog=db_a9383d_sloths;Persist Security Info=False;User ID=db_a9383d_sloths_admin;Password=usr12345.;MultipleActiveResultSets=False;Connection Timeout=30;");
             
         }, ServiceLifetime.Transient);
 

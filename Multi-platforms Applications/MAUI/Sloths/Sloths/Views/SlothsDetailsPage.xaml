@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sloths.Views.SlothsDetailsPage"
+             xmlns:viewmodel="clr-namespace:Sloths.ViewModel"
+             x:DataType="viewmodel:SlothsDetailsViewModel"
+             Shell.PresentationMode="Animated"
+             Title="{Binding Sloth.Name}">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid ColumnDefinitions="*,Auto,*"
+                  RowDefinitions="10,30, 120">
+                <BoxView 
+                           Color="ForestGreen"
+                           Grid.ColumnSpan="3"
+                           HeightRequest="250"
+                           HorizontalOptions="FillAndExpand">
+                </BoxView>
+                <Label
+                    Text="{Binding Sloth.Name}"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Large"
+                    FontAttributes="Italic"
+                    TextColor="BurlyWood"
+                    Grid.RowSpan="2"
+                    Grid.Column="1"
+                    ></Label>
+                <Frame
+                    Grid.RowSpan="3"
+                    Grid.Column="1"
+                    HeightRequest="160"
+                    WidthRequest="160"
+                    CornerRadius="80"
+                    HorizontalOptions="Center"
+                    IsClippedToBounds="True"
+                    Padding="0"
+                    Margin="0,80,0,0">
+                    <Image Aspect="AspectFill"
+                           HeightRequest="160"
+                           WidthRequest="160"
+                           VerticalOptions="Center"
+                           Source="{Binding Sloth.Image}"></Image>
+                </Frame>
+
+            </Grid>
+            <VerticalStackLayout
+                Margin="10,50,10,100" Padding="0,20,10,10" >
+                <Label Padding="0,0,0,20" Text="{Binding Sloth.Description}" FontAttributes="Italic"/>
+                <Label LineBreakMode="WordWrap">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Localiation:   " TextColor="Red" FontAttributes="Bold" FontSize="14"/>
+                            <Span  FontAttributes="Italic" Text="{Binding Sloth.Localization,  StringFormat='{0}'}" FontSize="14"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label LineBreakMode="WordWrap">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Population:   " TextColor="Red" FontAttributes="Bold" FontSize="14"/>
+                            <Span  FontAttributes="Italic" Text="{Binding Sloth.Population,  StringFormat='{0}'}" FontSize="14"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label LineBreakMode="WordWrap">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Size" TextColor="Red" FontAttributes="Bold" FontSize="14"/>
+                            <Span Text=" "></Span>
+                            <Span  FontAttributes="Italic" Text="{Binding Sloth.MinSize,  StringFormat='Min: {0}  '}" FontSize="14"/>
+                            <Span Text=" "></Span>
+                            <Span  FontAttributes="Italic" Text="{Binding Sloth.MaxSize,  StringFormat='Max: {0} '}" FontSize="14"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label LineBreakMode="WordWrap">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Weight" TextColor="Red" FontAttributes="Bold" FontSize="14"/>
+                            <Span Text=" "></Span>
+                            <Span  FontAttributes="Italic" Text="{Binding Sloth.MinWeight,  StringFormat='Min: {0}  '}" FontSize="14"/>
+                            <Span Text=" "></Span>
+                            <Span  FontAttributes="Italic" Text="{Binding Sloth.MaxWeight,  StringFormat='Max: {0} '}" FontSize="14"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

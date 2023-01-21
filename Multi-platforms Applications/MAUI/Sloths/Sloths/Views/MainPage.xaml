@@ -1,40 +1,96 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Sloths.MainPage">
+             x:Class="Sloths.MainPage"
+             xmlns:model="clr-namespace:Sloths.Models;assembly=DataAccessLayer"
+             xmlns:viewmodel="clr-namespace:Sloths.ViewModel"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="True"
+             Title="{Binding Title}"
+             x:DataType="viewmodel:SlothsViewModel">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+    <Grid ColumnDefinitions="*,*"
+          ColumnSpacing="0"
+          RowDefinitions="*,Auto"
+          RowSpacing="3"
+          BackgroundColor="WhiteSmoke">
 
-            <Image
-                Source="sloth_icon.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+        <CollectionView 
+                       Grid.ColumnSpan="2"
+                       ItemsSource="{Binding Sloths}"
+                        SelectionMode="None"
+                        >
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Sloth">
+                    <Grid Padding="10">
+                        <Frame HeightRequest="125"
+                                BorderColor="Green"
+                                 CornerRadius="10">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                      CommandParameter="{Binding .}"
+                                                      Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:SlothsViewModel}}, Path=GoToDetailsCommand}">
+                                    
+                                </TapGestureRecognizer>
+                            </Frame.GestureRecognizers>
+                            <Grid Padding="0"
+                                  ColumnDefinitions="125,250">
+                                <Image Source="{Binding Image}"
+                                       WidthRequest="125"
+                                       HeightRequest="125"/>
+                                <VerticalStackLayout Grid.Column="1"
+                                                      Padding="20"
+                                                      VerticalOptions="Start"
+                                                     HorizontalOptions="StartAndExpand"
+                                                      Grid.RowSpan="2"
+                                                      Grid.Row="2">
+                                    <Label Text="{Binding Name}"
+                                           FontSize="Header"                                           
+                                           ></Label>
+                                    <Label Text="{Binding Localization}"
+                                           FontAttributes="Italic" 
+                                           FontSize="Caption"></Label>
+                                </VerticalStackLayout>
+                            </Grid>            
+                        </Frame>
+                    </Grid>
+                </DataTemplate>
 
-            <Label
-                Text="Welcome Sloth Lover"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Text="Get Sloths"
+                BorderColor="DarkGreen"
+                Grid.Row="1"
+                Command="{Binding GetSlothsCommand}"
+                IsEnabled="{Binding IsNotBusy}"                
+                BackgroundColor="Green"
+                TextColor="White"
+                Margin="8"            
+                
+        ></Button>
+        <Button Text="Get Closest Sloth"
+                BorderColor="DarkGreen"
+                Grid.Row="1"
+                Grid.Column="1"
+                Command="{Binding GetTheClosestSlothCommand}"
+                IsEnabled="{Binding IsNotBusy}"                
+                BackgroundColor="Green"
+                TextColor="White"
+                Margin="8"               
+                
+        ></Button>
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-            
-            <Button
-                x:Name="CounterBtn"
-                Text="Get the list of sloth spices"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-        </VerticalStackLayout>
-    </ScrollView>
+
+
+        <ActivityIndicator
+            IsVisible="{Binding IsBusy}"
+            IsRunning="{Binding IsBusy}"
+            HorizontalOptions="FillAndExpand"
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="3"
+                   Color="Orange" 
+          />
+    </Grid>
+
 
 </ContentPage>
