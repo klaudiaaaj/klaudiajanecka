@@ -42,8 +42,8 @@
                            VerticalOptions="Center"
                            Source="{Binding Sloth.Image}"></Image>
                 </Frame>
-
-            </Grid>
+             
+            </Grid>      
             <VerticalStackLayout
                 Margin="10,50,10,100" Padding="0,20,10,10" >
                 <Label Padding="0,0,0,20" Text="{Binding Sloth.Description}" FontAttributes="Italic"/>
@@ -86,7 +86,13 @@
                     </Label.FormattedText>
                 </Label>
             </VerticalStackLayout>
-
+            <Button
+                Text="Show localization"
+                Command="{Binding OpenMapCommand}"
+                BackgroundColor="Gray">
+            </Button>
         </VerticalStackLayout>
+
+
     </ScrollView>
 </ContentPage>

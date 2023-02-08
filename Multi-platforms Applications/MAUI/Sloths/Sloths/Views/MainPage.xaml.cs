@@ -1,6 +1,5 @@
 ﻿using Sloths.Services;
 using Sloths.ViewModel;
-using Sloths.Views;
 
 namespace Sloths;
 

@@ -13,8 +13,9 @@ namespace Sloths.Repositories
         }
         public async Task<IEnumerable<Sloth>> GetAllSloths()
         {
-                var result=await context.Sloth
-            .ToArrayAsync();
+            var result = await context.Sloth
+                  .ToArrayAsync();
+
             return result;
         }
     }

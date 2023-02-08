@@ -1,7 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Microsoft.Maui.Devices.Sensors;
-using Microsoft.Maui.Networking;
 using MonkeyFinder.ViewModel;
 using Sloths.Models;
 using Sloths.Services;
@@ -20,7 +18,7 @@ namespace Sloths.ViewModel
 
         public SlothsViewModel(ISlothService slothService, IConnectivity connectivity, IGeolocation geolocation)
         {
-            Title = "Sloths from the Earth";
+            Title = "Sloths on the Earth";
             this.slothService = slothService;
             this.connectivity = connectivity;
             this.geolocation = geolocation;
@@ -82,8 +80,11 @@ namespace Sloths.ViewModel
         [RelayCommand]
         async Task GetTheClosestSloth()
         {
-            if (IsBusy && Sloths.Count == 0)
+            if ( Sloths.Count == 0)
+            {
+                await Shell.Current.DisplayAlert("No Sloths Found", "First click 'Get Sloths' Button!", "Ok");
                 return;
+            }
 
             try
             {
