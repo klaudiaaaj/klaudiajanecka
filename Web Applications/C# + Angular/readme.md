@@ -8,10 +8,10 @@
 * [External Functions](#external-functions)
 
 # General info
-Inspections Application is an application made to provide the functionality for inspectors performing controle in company. 
-Authors: 
-Klaudia Janecka 
-Jakub Wojciechowski
+Inspections Application is an application made to provide the functionality for inspectors performing controle in company.   
+Authors:   
+*Klaudia Janecka   
+*Jakub Wojciechowski  
 
 # Technologies
 Project is created with:
