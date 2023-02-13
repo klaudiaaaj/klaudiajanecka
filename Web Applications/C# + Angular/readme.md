@@ -9,7 +9,10 @@
 
 # General info
 Inspections Application is an application made to provide the functionality for inspectors performing controle in company. 
-	
+Authors: 
+Klaudia Janecka 
+Jakub Wojciechowski
+
 # Technologies
 Project is created with:
 * .NET 6.0
